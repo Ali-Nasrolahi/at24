@@ -11,3 +11,5 @@
 dd if=input  of=/dev/eeprom0 seek=3 bs=1 count=5 # For writing to specific address
 dd if=/dev/eeprom0 of=output skip=3 bs=1 count=5 # For reading from specific address
 ```
+
+Please also review related post on my website available at [Ali-Nasrolahi/Portfolio/AT24-Driver](https://ali-nasrolahi.github.io/portfolio/at24-driver/).
