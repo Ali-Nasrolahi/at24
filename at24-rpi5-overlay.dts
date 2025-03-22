@@ -1,0 +1,23 @@
+/dts-v1/;
+/plugin/;
+
+/{
+	compatible = "brcm,bcm2712";
+
+	fragment@0 {
+        target = <&i2c1>;
+
+        __overlay__ {
+            status="okay";
+
+            eeprom@50 {
+                compatible = "zephyr,eeprom_driver", "atmel,24c02";
+                pagesize = <8>;
+                size = <256>;
+                reg = <0x50>;
+                status="okay";
+            };
+        };
+	};
+
+}
